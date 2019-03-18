@@ -29,3 +29,10 @@ $ pip install tensorflow==1.9.0rc1
 ```
 
 NOTE: Using tensorflow-gpu will result in a much faster training time of the CNN, but results may differ slightly from ones reported in the paper. This is because the training of the CNN used in this paper was done using a cpu.
+
+### Install *word2vec* vectors
+Using the pre-trained word2vec vectors requires downloading the binary file from (https://code.google.com/p/word2vec/)
+
+[Download link](https://drive.google.com/uc?id=0B7XkCwpI5KDYNlNUTTlSS21pQmM&export=download) (1.5Gb)
+
+The file name is `GoogleNews-vectors-negative300.bin.gz`. This file must be placed in the same directory as the python files in order to be used without modifying the code.
