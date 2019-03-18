@@ -7,14 +7,18 @@ Created on Fri Mar 15 12:42:22 2019
 
 import main
 
-lr = 1e-3 #learning rate
+test_size=0.2
+
 num_filters = 100
-dropout_percent = 0.6    
-filter_sizes = [3,4,5] 
+filter_sizes = [3,4,5]
+lr = 1e-3 #learning rate
+   
 l2_constraint = None # None or range of XX
+dropout_percent = 0.6 
+
 num_epoch = 3
 batch_size = 128
-test_size=0.2
+
 
 #replication of the paper
 # tuning to beat the 84.13%, prec. 87%, rec. 83%
