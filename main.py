@@ -245,12 +245,12 @@ def main():
         # Build model
 
     model = create_model(embedding_matrix=embedding_matrix, num_words=num_words, max_tokens=max_tokens,
-                         filter_sizes=filter_sizes, lr = pm.lr, num_filters = num_filters,
-                         embedding_size = embedding_size, dropout_percent = dropout_percent, l2_constraint=l2_constraint)
+                         filter_sizes=pm.filter_sizes, lr = pm.lr, num_filters = pm.num_filters,
+                         embedding_size = embedding_size, dropout_percent = pm.dropout_percent, l2_constraint=pm.l2_constraint)
     
 
     # Train model
-    history = model.fit(x_train_pad, y_train, epochs=num_epoch, batch_size=batch_size)
+    history = model.fit(x_train_pad, y_train, epochs=pm.num_epoch, batch_size=pm.batch_size)
 
     # Generate predictions on test set
     print('Generating predictions on the test set...\n')
